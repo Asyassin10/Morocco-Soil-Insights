@@ -1,6 +1,8 @@
 # Morocco Soil Insights
 
-**Demo:** [Watch on YouTube](https://www.youtube.com/watch?v=FB_0ssN-jhc)
+[![Watch the Morocco Soil Insights demo on YouTube](https://img.youtube.com/vi/FB_0ssN-jhc/hqdefault.jpg)](https://www.youtube.com/watch?v=FB_0ssN-jhc)
+
+[*Watch the demo on YouTube*](https://www.youtube.com/watch?v=FB_0ssN-jhc)
 
 Morocco Soil Insights lets you explore predicted soil properties for a selected field. Draw a boundary or upload a GeoJSON, confirm it, and view soil layers, terrain, and a comparison with a second field.
 
@@ -50,22 +52,41 @@ Soil values are map predictions, not lab measurements. Sources use different res
 
 ## V2 roadmap
 
-Possible next improvements, in priority order:
+Planned ideas for a future version:
 
-1. **Arabic and French interface:** translate the field workflow, layer names, units, and help text.
-2. **Field reports:** export a clear PDF summary and the validated GeoJSON with sources, depths, and limitations included.
-3. **Stronger land comparisons:** make source/depth matching and data coverage easier to understand, and show unavailable comparisons plainly.
-4. **Morocco-specific crop guidance:** add only after finding reliable local crop requirements and suitable climate data; present results as guidance with sources, not as a guarantee or prescription.
+- **Arabic and French:** translate the field workflow, property names, units, and help.
+- **Field reports:** export a PDF summary and the validated GeoJSON, including data sources, depths, and limitations.
+- **Clearer comparisons:** explain source and depth matching, show data coverage, and make unavailable values clear.
+- **AI soil assistant:** answer a wide range of user questions using the selected field’s available measurements and a reviewed knowledge base of trusted soil and agricultural references. Retrieval-augmented generation (RAG) can ground answers in those references, while MCP can let an AI assistant call approved tools to retrieve field results or compare land. Answers should link to sources and distinguish measured facts from estimates.
+- **Model-based probabilities:** investigate ready-to-use, validated models for specific questions (for example, crop suitability). Show a probability only when the model is appropriate for Morocco and its input data; explain its sources and uncertainty. This would be a model estimate, not a guarantee.
+- **Morocco-specific crop guidance:** add when reliable local crop requirements and suitable climate data are available, with sources and clear limits.
 
-These are proposed V2 ideas, not features currently in the app.
+These are future ideas; they are not features currently in the app.
 
-## Run locally on Windows
+## Run locally
 
-Requires **Python 3.11+** and **Node.js 22+**. From the project folder, install dependencies:
+Requires **Python 3.11+** and **Node.js 22+**. From the project folder, create a Python environment:
+
+```sh
+python -m venv backend/.venv
+```
+
+Activate it in your terminal, using the command for your shell:
+
+```sh
+# macOS / Linux (bash or zsh)
+source backend/.venv/bin/activate
+```
 
 ```powershell
-python -m venv backend/.venv
-.\backend\.venv\Scripts\python.exe -m pip install -r backend/requirements.txt
+# Windows (PowerShell)
+.\backend\.venv\Scripts\Activate.ps1
+```
+
+Then install the dependencies:
+
+```sh
+python -m pip install -r backend/requirements.txt
 npm --prefix frontend ci
 ```
 
@@ -78,15 +99,15 @@ BACKEND_URL=http://127.0.0.1:8010
 
 Keep the token public and restricted. Restart Next.js after changing `.env.local`.
 
-Open two PowerShell terminals in the project folder. Start FastAPI in the first:
+Open two terminals in the project folder. Activate the Python environment in the first, then start FastAPI:
 
-```powershell
-.\backend\.venv\Scripts\python.exe -m uvicorn backend.main:app --host 127.0.0.1 --port 8010
+```sh
+python -m uvicorn backend.main:app --host 127.0.0.1 --port 8010
 ```
 
-Start Next.js in the second:
+In the second terminal, start Next.js:
 
-```powershell
+```sh
 cd frontend
 npm run dev -- --port 3000
 ```
@@ -99,15 +120,15 @@ Upload one GeoJSON `Polygon` or `MultiPolygon`, a `Feature` containing one, or a
 
 ## Checks and project details
 
-Run backend tests from the project folder:
+Run backend tests from the project folder with the Python environment activated:
 
-```powershell
-.\backend\.venv\Scripts\python.exe -m pytest backend/tests -q
+```sh
+python -m pytest backend/tests -q
 ```
 
 Run frontend checks from `frontend`:
 
-```powershell
+```sh
 npm run typecheck
 npm run build
 ```
