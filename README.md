@@ -1,6 +1,6 @@
 # Morocco Soil Insights
 
-[![Watch the Morocco Soil Insights demo on YouTube](https://img.youtube.com/vi/FB_0ssN-jhc/hqdefault.jpg)](https://www.youtube.com/watch?v=FB_0ssN-jhc)
+[![Watch the Morocco Soil Insights demo on YouTube](docs/demo/youtube-demo-thumbnail.svg)](https://www.youtube.com/watch?v=FB_0ssN-jhc)
 
 [*Watch the demo on YouTube*](https://www.youtube.com/watch?v=FB_0ssN-jhc)
 
