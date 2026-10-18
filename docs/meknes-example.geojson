@@ -1,0 +1,44 @@
+{
+  "type": "FeatureCollection",
+  "name": "Meknes example field (synthetic)",
+  "description": "Synthetic field boundaries for upload testing; not surveyed or cadastral parcels.",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "plotId": "morocco-01",
+        "fieldName": "Meknes Test Field 1",
+        "country": "Morocco",
+        "synthetic": true,
+        "isArchived": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -5.582,
+              33.802
+            ],
+            [
+              -5.58,
+              33.802
+            ],
+            [
+              -5.58,
+              33.804
+            ],
+            [
+              -5.582,
+              33.804
+            ],
+            [
+              -5.582,
+              33.802
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

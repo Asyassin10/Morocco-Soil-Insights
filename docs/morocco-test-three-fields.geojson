@@ -1,0 +1,49 @@
+{
+  "type": "FeatureCollection",
+  "name": "Morocco test farm - Meknes (synthetic)",
+  "description": "Synthetic field boundaries for upload testing; not surveyed or cadastral parcels.",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "plotId": "morocco-01",
+        "fieldName": "Meknes Test Field 1",
+        "country": "Morocco",
+        "synthetic": true,
+        "isArchived": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-5.582, 33.802], [-5.58, 33.802], [-5.58, 33.804], [-5.582, 33.804], [-5.582, 33.802]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plotId": "morocco-02",
+        "fieldName": "Meknes Test Field 2",
+        "country": "Morocco",
+        "synthetic": true,
+        "isArchived": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-5.5795, 33.802], [-5.5775, 33.802], [-5.5775, 33.804], [-5.5795, 33.804], [-5.5795, 33.802]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plotId": "morocco-03",
+        "fieldName": "Meknes Test Field 3",
+        "country": "Morocco",
+        "synthetic": true,
+        "isArchived": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[-5.582, 33.8045], [-5.5795, 33.8045], [-5.5795, 33.806], [-5.582, 33.806], [-5.582, 33.8045]]]
+      }
+    }
+  ]
+}

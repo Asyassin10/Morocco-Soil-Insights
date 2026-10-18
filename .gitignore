@@ -1,0 +1,15 @@
+frontend/node_modules/
+frontend/.next/
+frontend/.next-e2e/
+frontend/.next-empty/
+frontend/.env.local
+frontend/playwright-report/
+frontend/test-results/
+backend/.venv/
+backend/.cache/
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+.logs/
+frontend/tsconfig.tsbuildinfo

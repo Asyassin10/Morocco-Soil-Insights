@@ -1,0 +1,32 @@
+{
+  "startedAt": "2026-10-18T00:28:29.618Z",
+  "app": "http://127.0.0.1:3000",
+  "fields": {
+    "land-a-square.geojson": {
+      "analyzed": true,
+      "pHsummary": "Soil pH 6.3pH Organic carbon 9.34g/kg Total nitrogen 1.22g/kg Clay 30.96% Sand 49.48% Silt 1",
+      "soilShown": true,
+      "hasAnalysisError": false
+    },
+    "land-b-square.geojson": {
+      "analyzed": true,
+      "pHsummary": "Soil pH How acidic or alkaline your soil is. iSDAsoil · 0-20 cm View field in 3D",
+      "soilShown": true,
+      "hasAnalysisError": false
+    }
+  },
+  "actions": [
+    "Opened the live satellite map and let the field workspace settle.",
+    "Uploaded and confirmed square Land A; real soil and terrain analysis completed.",
+    "Clicked through pH, nutrients, water and terrain readings in the live sidebar.",
+    "Uploaded and confirmed adjacent square Land B; real soil and terrain analysis completed.",
+    "Fitted both squares in the satellite map and tilted the map.",
+    "Opened the side-by-side soil reading comparison, then switched into the paired 3D views.",
+    "Dragged to rotate and clicked zoom on each interactive 3D field stack.",
+    "Selected pH, clay, organic carbon, and water-holding layers, then paused on their 3D details."
+  ],
+  "browserErrors": [],
+  "durationSeconds": 120,
+  "finishedAt": "2026-10-18T00:30:29.794Z",
+  "result": "passed"
+}
